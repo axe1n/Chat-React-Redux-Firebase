@@ -9,10 +9,13 @@ export const fetchGistsList = (url) => async (dispatch) => {
 
   try {
     const response = await fetch(url);
+
     if (!response.ok) {
       throw new Error(`Request failed with status ${response.status}`);
     }
+
     const result = await response.json();
+
     dispatch(getGistsSucces(result));
   } catch (error) {
     dispatch(getGistsFailure(error.message));

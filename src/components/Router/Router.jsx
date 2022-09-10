@@ -3,15 +3,15 @@ import { List, ListItem, CssBaseline, Container } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-import PrivateRoute from '../PrivateRoute/PrivateRoute';
-import PublicRoute from '../PublicRoute/PublicRoute';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PublicRoute from './components/PublicRoute/PublicRoute';
 import Chats from '../Chats/Chats';
 import Home from '../Home/Home';
 import Profile from '../Profile/Profile';
 import Gists from '../Gists/Gists';
-import Login from '../Login/Login';
-import SignUp from '../SignUp/SignUp';
-import Logout from '../Logout/Logout';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
+import Logout from './components/Logout/Logout';
 
 export default function Router() {
   const auth = getAuth();

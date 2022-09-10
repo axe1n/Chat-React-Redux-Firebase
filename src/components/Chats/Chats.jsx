@@ -1,8 +1,8 @@
 import { Container, Typography, Box } from '@mui/material';
 
-import ChatsList from '../ChatsList/ChatsList';
-import MessageList from '../MessageList/MessageList';
-import GetMessage from '../GetMessage/GetMessage';
+import ChatsList from './components/ChatsList/ChatsList';
+import MessageList from './components/MessageList/MessageList';
+import GetMessage from './components/WriteMessage/WriteMessage';
 
 export default function Chats() {
   return (

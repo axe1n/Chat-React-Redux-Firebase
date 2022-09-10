@@ -8,7 +8,8 @@ const initialState = {
 export const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_NAME:
-      return { ...state, name: action.payloud };
+      return { ...state, name: action.newName };
+
     default:
       return state;
   }

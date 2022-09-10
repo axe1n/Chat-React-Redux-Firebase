@@ -3,7 +3,9 @@ import { ADD_MESSAGE, addMessage } from '../store/messages/actions';
 
 function* botMessageWorker(action) {
   const state = yield select((state) => state);
+
   if (action.message.author !== state.profile.BOT) {
+    // задержка сообщения от бота
     yield delay(1000);
     yield put(
       addMessage(
@@ -16,6 +18,7 @@ function* botMessageWorker(action) {
     );
   }
 }
+
 function* addMessageWatcher() {
   yield takeLatest(ADD_MESSAGE, botMessageWorker);
 }

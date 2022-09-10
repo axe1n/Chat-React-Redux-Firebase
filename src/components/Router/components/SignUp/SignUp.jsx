@@ -7,6 +7,7 @@ export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
   const auth = getAuth();
 
   const handlePassChange = (e) => {

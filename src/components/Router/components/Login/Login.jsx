@@ -8,7 +8,9 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
   const auth = getAuth();
+
   const history = useHistory();
 
   const handlePassChange = (e) => {

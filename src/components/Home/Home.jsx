@@ -1,5 +1,6 @@
 import { Container, Typography, Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+
 import { useSelector, shallowEqual } from 'react-redux/es/exports';
 import { getMessageAuthor } from '../../store/selectors';
 

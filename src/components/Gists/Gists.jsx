@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 
-import RenderGists from './RenderGists/RenderGists';
 import { fetchGistsList } from '../../asyncAction/fetchGistsList';
 import { API_URL_PUBLIC } from '../../constants/constants';
 import {
@@ -9,6 +8,8 @@ import {
   selectGistsError,
   selectGistsStatus,
 } from '../../store/selectors';
+
+import RenderGists from './RenderGists/RenderGists';
 
 export default function Gists() {
   const dispatch = useDispatch();

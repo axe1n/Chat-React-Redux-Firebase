@@ -12,6 +12,7 @@ import RenderChatsList from './RenderChatsList/RenderChatsList';
 
 function ChatsList() {
   const dispatch = useDispatch();
+  const [newChatName, setNewChatName] = useState('');
 
   const chatsList = useSelector(getChatsList, shallowEqual);
 
@@ -21,7 +22,6 @@ function ChatsList() {
   const match = useRouteMatch();
 
   const [visible, setVisible] = useState(false);
-  const [newChatName, setNewChatName] = useState('');
 
   const chatId = params.id ? params.id : 'id0';
 

@@ -13,6 +13,7 @@ import RenderGists from './RenderGists/RenderGists';
 
 export default function Gists() {
   const dispatch = useDispatch();
+
   const gistsList = useSelector(getGistsList, shallowEqual);
   const error = useSelector(selectGistsError, shallowEqual);
   const status = useSelector(selectGistsStatus, shallowEqual);

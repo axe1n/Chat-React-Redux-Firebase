@@ -71,9 +71,11 @@ export default function RenderChatList(props) {
                     Чат {id} - {name}
                   </Link>
                 </ListItemText>
-                <Button variant="contained" onClick={handleClickDeleteChat}>
-                  X
-                </Button>
+                {id !== 'id0' && (
+                  <Button variant="contained" onClick={handleClickDeleteChat}>
+                    X
+                  </Button>
+                )}
               </ListItem>
             </Box>
           );
